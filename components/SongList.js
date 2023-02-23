@@ -4,7 +4,7 @@ import { Images, Themes } from "../assets/Themes";
 import Song from "./Song";
 
 
-const SongList = ({tracks}) => {
+const SongList = ({tracks, navigation}) => {
 
     return (
     <View> 
@@ -18,7 +18,7 @@ const SongList = ({tracks}) => {
             console.log(item);
             console.log(index);
                 return (
-                 <Song song={item} index={index}/>
+                 <Song song={item} index={index} navigation={navigation}/>
                 )
             }}
             keyExtractor={(item) => item.id}
